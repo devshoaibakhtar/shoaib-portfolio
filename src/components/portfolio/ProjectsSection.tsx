@@ -6,6 +6,7 @@ const projects = [
     title: "Blog Website",
     desc: "A full-featured blog platform with user authentication and content management.",
     tech: ["HTML", "CSS", "Bootstrap", "JS", "PHP", "MySQL"],
+    github: "https://github.com/devshoaibakhtar/blog_website",
   },
   {
     title: "Learning Platform",
@@ -16,6 +17,7 @@ const projects = [
     title: "Hospital Management System",
     desc: "OOP-based desktop application for hospital operations management.",
     tech: ["C++", "OOP"],
+    github: "https://github.com/devshoaibakhtar/hospital-management-system",
   },
   {
     title: "DevOps CI/CD Pipeline",
@@ -41,6 +43,7 @@ const projects = [
     title: "Hostel Management System",
     desc: "Desktop-based hostel management app for student records, room allocation, and fee tracking.",
     tech: ["Python", "Tkinter", "SQLite"],
+    github: "https://github.com/devshoaibakhtar/hostel-management-system",
   },
 ];
 
@@ -74,9 +77,17 @@ const ProjectsSection = () => (
                 {project.title}
               </h3>
               <div className="flex gap-2 mt-1">
-                <a href="#" className="text-muted-foreground hover:text-primary transition-colors" aria-label="GitHub">
-                  <Github size={16} />
-                </a>
+                {project.github && (
+                  <a
+                    href={project.github}
+                    className="text-muted-foreground hover:text-primary transition-colors"
+                    aria-label="GitHub"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Github size={16} />
+                  </a>
+                )}
                 <ExternalLink size={16} className="text-muted-foreground group-hover:text-primary transition-colors" />
               </div>
             </div>
