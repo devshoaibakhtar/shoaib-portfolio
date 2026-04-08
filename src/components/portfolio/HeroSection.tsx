@@ -101,7 +101,7 @@ const HeroSection = () => {
             Hire Me
           </a>
           <a
-            href="/shoaib-resume.pdf"
+            href="/Shoaib-resume.pdf"
             download="Shoaib-Akhtar-CV.pdf"
             className="inline-flex items-center gap-2 px-8 py-3 border border-primary/40 text-primary font-semibold rounded-lg transition-all duration-300 hover:bg-primary/10 hover:border-primary hover:scale-105"
           >
