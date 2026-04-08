@@ -7,6 +7,8 @@ const expertiseData = [
   { icon: "🤖", title: "MLOps", desc: "Managing ML model lifecycle, deployment pipelines, monitoring" },
   { icon: "📱", title: "Mobile App Development", desc: "Building modern mobile applications for both Android and iOS platforms using cross platform frameworks and native tools. Focus on performance, clean architecture, and user friendly design." },
   { icon: "🎨", title: "UI / UX Design", desc: "Designing clean and user friendly interfaces for web and mobile applications with focus on usability, accessibility, and modern design standards." },
+  { icon: "🕷️", title: "Web Scraping", desc: "Extracting and processing data from websites using automation tools and robust scraping practices" },
+
 ];
 
 const ExpertiseSection = () => (
