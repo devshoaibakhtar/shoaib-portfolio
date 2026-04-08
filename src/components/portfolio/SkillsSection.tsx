@@ -8,6 +8,7 @@ const skillCategories = [
   { label: "Databases", skills: ["MySQL", "MongoDB", "PostgreSQL", "Oracle", "Firebase", "Supabase"] },
   { label: "DevOps & Cloud", skills: ["Docker", "Docker Compose", "Kubernetes", "CI/CD", "GitHub Actions", "Jenkins", "Linux", "Nginx", "AWS Basics", "Microservices Basics"] },
   { label: "MLOps", skills: ["ML Pipeline", "Model Deployment", "Python"] },
+  { label: "Web Scraping", skills: ["Python", "BeautifulSoup", "Scrapy", "Selenium", "Requests", "Playwright"] },
   { label: "Tools & Others", skills: ["Git", "GitHub", "Figma", "Lucid Chart", "Jmeter", "Visual Studio Code", "Postman", "API Integration", "Web Performance Optimization"] },
   { label: "Soft Skills", skills: ["Problem Solving", "Leadership", "Team Work", "MultiTasking", "Communication", "Project Management", "Time Management", "Risk Management"]}
 ];
