@@ -2,12 +2,12 @@ import { motion } from "framer-motion";
 
 
 const skillCategories = [
-  { label: "Frontend", skills: ["React.js", "Next.js", "TypeScript", "JavaScript", "HTML", "CSS", "Tailwind CSS", "Bootstrap", "Responsive Web Design"] },
-  { label: "Backend", skills: ["Node.js", "Express.js", "Django", "PHP", "C#", "Python", "REST APIs"] },
+  { label: "Frontend", skills: ["React.js", "Next.js", "TypeScript", "JavaScript", "HTML", "CSS", "Tailwind CSS", "Bootstrap", "Vue.Js", "Chart.Js", "Responsive Web Design"] },
+  { label: "Backend", skills: ["Node.js", "Express.js", "Django", "PHP", "C#", "Python", "Flask", "REST APIs"] },
   { label: "Mobile", skills: ["Flutter", "Dart", "Kotlin", "Swift", "Android Development", "Cross Platform Development", "Mobile UI Design"] },
   { label: "Databases", skills: ["MySQL", "MongoDB", "PostgreSQL", "Oracle", "Firebase", "Supabase"] },
-  { label: "DevOps & Cloud", skills: ["Docker", "Docker Compose", "Kubernetes", "CI/CD", "GitHub Actions", "Jenkins", "Linux", "Nginx", "AWS Basics", "Microservices Basics"] },
-  { label: "MLOps", skills: ["ML Pipeline", "Model Deployment", "Python"] },
+  { label: "DevOps & Cloud", skills: ["Docker", "Docker Compose", "Kubernetes", "CI/CD", "GitHub Actions", "Jenkins", "Wazuh", "Linux", "Nginx", "AWS Basics", "Microservices Basics"] },
+  { label: "MLOps", skills: ["ML Pipeline", "Model Deployment", "Python", "Scikit-Learn", "PyTorch"] },
   { label: "Web Scraping", skills: ["Python", "BeautifulSoup", "Scrapy", "Selenium", "Requests", "Playwright"] },
   { label: "Tools & Others", skills: ["Git", "GitHub", "Figma", "Lucid Chart", "Jmeter", "Visual Studio Code", "Postman", "API Integration", "Web Performance Optimization"] },
   { label: "Soft Skills", skills: ["Problem Solving", "Leadership", "Team Work", "MultiTasking", "Communication", "Project Management", "Time Management", "Risk Management"]}
