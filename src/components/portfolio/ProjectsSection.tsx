@@ -3,6 +3,12 @@ import { ExternalLink, Github } from "lucide-react";
 
 const projects = [
   {
+    title: "FYP: DeceptiCloud",
+    desc: "DeceptiCloud is a real world Cyber deception system. It intercepts incoming traffic, classifies it using ML models, routes legitimate users to real websites and attackers to identical fake honeypot websites, monitors all attacker activity via Wazuh SIEM, profiles attackers in real time, and continuously retrains its ML models on new attack data so future attackers using the same strategy are detected faster.",
+    tech: ["Python", "JavaScript", "HTML5", "CSS3", "Flask", "Scikit-Learn", "TensorFlow", "Keras", "PyTorch", "Ollama", "SQLite", "Wazuh SIEM", "OpenSearch", "Vue.js", "Chart.js", "Leaflet.js", "Docker", "Kubenetes"],
+    github: "https://github.com/devshoaibakhtar/Final-Year-Project-DeceptiCloud",
+  },
+  {
     title: "Blog Website",
     desc: "A full-featured blog platform with user authentication and content management.",
     tech: ["HTML", "CSS", "Bootstrap", "JS", "PHP", "MySQL"],
