@@ -1,56 +1,82 @@
 import { motion } from "framer-motion";
 import { ExternalLink, Github } from "lucide-react";
 
-const projects = [
+type Project = {
+  title: string;
+  desc: string;
+  tech: string[];
+  github?: string;
+};
+
+const projects: Project[] = [
   {
     title: "FYP: DeceptiCloud",
     desc: "DeceptiCloud is a real world Cyber deception system. It intercepts incoming traffic, classifies it using ML models, routes legitimate users to real websites and attackers to identical fake honeypot websites, monitors all attacker activity via Wazuh SIEM, profiles attackers in real time, and continuously retrains its ML models on new attack data so future attackers using the same strategy are detected faster.",
-    tech: ["Python", "JavaScript", "HTML5", "CSS3", "Flask", "Scikit-Learn", "TensorFlow", "Keras", "PyTorch", "Ollama", "SQLite", "Wazuh SIEM", "OpenSearch", "Vue.js", "Chart.js", "Leaflet.js", "Docker", "Kubenetes"],
-    github: "https://github.com/devshoaibakhtar/Final-Year-Project-DeceptiCloud",
+    tech: [
+      "Python",
+      "JavaScript",
+      "HTML5",
+      "CSS3",
+      "Flask",
+      "Scikit-Learn",
+      "TensorFlow",
+      "Keras",
+      "PyTorch",
+      "Ollama",
+      "SQLite",
+      "Wazuh SIEM",
+      "OpenSearch",
+      "Vue.js",
+      "Chart.js",
+      "Leaflet.js",
+      "Docker",
+      "Kubernetes"
+    ],
+    github: "https://github.com/devshoaibakhtar/Final-Year-Project-DeceptiCloud"
   },
   {
     title: "Blog Website",
     desc: "A full-featured blog platform with user authentication and content management.",
     tech: ["HTML", "CSS", "Bootstrap", "JS", "PHP", "MySQL"],
-    github: "https://github.com/devshoaibakhtar/blog_website",
+    github: "https://github.com/devshoaibakhtar/blog_website"
   },
   {
     title: "Learning Platform",
-    desc: "Dynamic web app connecting students & teachers for course management.",
-    tech: ["HTML", "CSS", "JavaScript", "PHP", "MySQL"],
+    desc: "Dynamic web app connecting students and teachers for course management.",
+    tech: ["HTML", "CSS", "JavaScript", "PHP", "MySQL"]
   },
   {
     title: "Hospital Management System",
     desc: "OOP-based desktop application for hospital operations management.",
     tech: ["C++", "OOP"],
-    github: "https://github.com/devshoaibakhtar/hospital-management-system",
+    github: "https://github.com/devshoaibakhtar/hospital-management-system"
   },
   {
     title: "DevOps CI/CD Pipeline",
     desc: "Automates build, test, and deployment workflows using Docker and GitHub Actions.",
-    tech: ["Docker", "GitHub Actions", "CI/CD", "Linux"],
+    tech: ["Docker", "GitHub Actions", "CI/CD", "Linux"]
   },
   {
     title: "Cloud Deployment Project",
     desc: "Deploying a full stack application on cloud infrastructure using containerization.",
-    tech: ["Docker", "AWS", "Nginx", "Node.js"],
+    tech: ["Docker", "AWS", "Nginx", "Node.js"]
   },
   {
     title: "ML Model Deployment",
     desc: "Deploying a machine learning model through a Flask API with monitoring.",
-    tech: ["Python", "Flask", "Docker", "ML"],
+    tech: ["Python", "Flask", "Docker", "ML"]
   },
   {
     title: "Android Task Manager App",
     desc: "A productivity mobile application built with Flutter for managing daily tasks.",
-    tech: ["Dart", "Flutter", "Firebase"],
+    tech: ["Dart", "Flutter", "Firebase"]
   },
   {
     title: "Hostel Management System",
     desc: "Desktop-based hostel management app for student records, room allocation, and fee tracking.",
     tech: ["Python", "Tkinter", "SQLite"],
-    github: "https://github.com/devshoaibakhtar/hostel-management-system",
-  },
+    github: "https://github.com/devshoaibakhtar/hostel-management-system"
+  }
 ];
 
 const ProjectsSection = () => (
@@ -71,7 +97,7 @@ const ProjectsSection = () => (
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
         {projects.map((project, i) => (
           <motion.div
-            key={project.title}
+            key={project.title + i}
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -82,22 +108,38 @@ const ProjectsSection = () => (
               <h3 className="text-lg font-semibold text-foreground group-hover:text-primary transition-colors">
                 {project.title}
               </h3>
+
               <div className="flex gap-2 mt-1">
                 {project.github && (
-                  <a
-                    href={project.github}
-                    className="text-muted-foreground hover:text-primary transition-colors"
-                    aria-label="GitHub"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <Github size={16} />
-                  </a>
+                  <>
+                    <a
+                      href={project.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="GitHub"
+                      className="text-muted-foreground hover:text-primary transition-colors"
+                    >
+                      <Github size={16} />
+                    </a>
+
+                    <a
+                      href={project.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="Open Project"
+                      className="text-muted-foreground hover:text-primary transition-colors"
+                    >
+                      <ExternalLink size={16} />
+                    </a>
+                  </>
                 )}
-                <ExternalLink size={16} className="text-muted-foreground group-hover:text-primary transition-colors" />
               </div>
             </div>
-            <p className="text-sm text-muted-foreground mb-4 flex-1">{project.desc}</p>
+
+            <p className="text-sm text-muted-foreground mb-4 flex-1">
+              {project.desc}
+            </p>
+
             <div className="flex flex-wrap gap-2">
               {project.tech.map((t) => (
                 <span
